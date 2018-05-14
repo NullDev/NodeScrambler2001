@@ -44,10 +44,12 @@ let init = async function(callback){
     },{
         type: "number",
         name: "ishift",
+        initial: 0,
         message: "Initial Shift"
     },{
         type: "number",
         name: "vshift",
+        initial: 1,
         message: "Shift Value"
     }]);
 
