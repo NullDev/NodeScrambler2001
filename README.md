@@ -9,10 +9,10 @@ It's WordScrambler2001 but with more fast
 
 ## OwO wats dis
 
-This is a useless NodeJS Clone of [Syraptor](https://github.com/Syrapt0r)'s [WordScrambler2001](https://github.com/Syrapt0r/WordScrambler2001).
+This is a useless NodeJS Clone of [Syrapt0r](https://github.com/Syrapt0r)'s [WordScrambler2001](https://github.com/Syrapt0r/WordScrambler2001).
 
 No, seriously. <br>
-It's a completely unnecessary repository which makes me question my existance and everything I believed in. 
+It's a completely unnecessary repository which makes me question my existence and everything I believed in. 
 
 <hr>
 
@@ -31,7 +31,7 @@ then keep on searching. You won't find it here.
 
 **What do our users say about this product:**
 
-- Nothing, because there aren't any and there will never be any...
+- "The best NodeJS project in the history of ever. Very good." - Syrapt0r
 
 <hr>
 
@@ -61,7 +61,7 @@ As far as I know, NodeJS isn't C.
 
 ## so... should I use NodeScrambler2001 instead of WordScrambler2001?
 
-No. 
+See: [use cases](#use-cases)
 
 <hr>
 
