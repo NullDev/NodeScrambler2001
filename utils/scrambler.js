@@ -7,10 +7,19 @@
 ////////////////////////////////
 
 class Scrambler {
-    constructor(ishift, vshift){
+    constructor(ishift, vshift, keytxt){
         this.initShift = ishift;
         this.shiftVals = vshift;
+        this.keyTxtVal = keytxt;
     }
+
+    encrypt(msg){
+        
+    };
+
+    decrypt(msg){
+        
+    };
 }
 
 module.exports = Scrambler;
