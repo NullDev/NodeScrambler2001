@@ -27,6 +27,12 @@ then keep on searching. You won't find it here.
 
 <hr>
 
+## Dependencies
+
+- all
+
+<hr>
+
 ## Testimonials
 
 **What do our users say about this product:**
