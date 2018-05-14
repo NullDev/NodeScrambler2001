@@ -59,14 +59,14 @@ $ `npm start`
 We actually have sum pretty neat command line args ;3 <br>
 Yah I was surprised too...
 
-| Argument | Alias | Description | Required |
-| -------- | ----- | ----------- | -------- |
-| --message | -m | The message to en-/decrypt | Yes |
-| --decrypt | -d | Decrypt the message | Yes |
-| --encrypt | -e | Encrypt the message | Yes |
-| --initshift | -i | This | Yes |
-| --shiftvalue | -v | That | Yes |
-| --key | -k | The Key | No |
+| Argument | Alias | Description | Required | Default |
+| -------- | ----- | ----------- | -------- | ------- |
+| --message | -m | The message to en-/decrypt | Yes | N/A |
+| --decrypt | -d | Decrypt the message | Yes | N/A |
+| --encrypt | -e | Encrypt the message | yes | N/A |
+| --initshift | -i | This | No | 0 | 
+| --shiftvalue | -v | That | No | 1 |
+| --key | -k | The Key | No | null |
 
 **Example:**
 
