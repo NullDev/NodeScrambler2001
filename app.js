@@ -6,12 +6,13 @@
 //----------------------------//
 ////////////////////////////////
 
-let fs     = require("fs");
-let prompt = require("prompts");
-let term   = require("terminal-kit").terminal;
+let fs        = require("fs");
+let prompt    = require("prompts");
+let term      = require("terminal-kit").terminal;
 
-let log = require("./utils/logger");
-let pj  = require("./package.json");
+let log       = require("./utils/logger");
+let scrambler = require("./utils/scrambler");
+let pj        = require("./package.json");
 
 console.log(
     "\n" +
