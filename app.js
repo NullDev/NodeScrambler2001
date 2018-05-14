@@ -74,7 +74,7 @@ let main = function(res){
 
 function end(){
     //Cleanups
-    console.log("\n");
+    console.log();
     process.exit(0);
 }
 
