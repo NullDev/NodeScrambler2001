@@ -54,6 +54,7 @@ let init = async function(callback){
     }]);
 
     term.singleLineMenu(["Encrypt", "Decrypt"], { selectedStyle: term.dim.blue.bgCyan }, function(err, call){
+        if (err) return log(err, true);
         res["decrypt"] = call.selectedIndex;
         return callback(res);
     });
