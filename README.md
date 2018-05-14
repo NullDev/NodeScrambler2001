@@ -33,6 +33,47 @@ then keep on searching. You won't find it here.
 
 <hr>
 
+## How 2 instol
+
+**Wait wait wait wait...**
+
+You are completely sure you want to do this? Like... A 100% positive?
+
+0. Open up your favourite terminal (and navigate somewhere you want to download the repository to) <br><br>
+1. Make sure you have nodejs installed. Test by  entering <br>
+$ `node -v` <br>
+If this returns a version number, NodeJS is installed. **If not**, get NodeJS <a href="https://nodejs.org/en/download/package-manager/">here</a>. <br><br>
+2. Clone the repository and navigate to it. If you have Git installed, type <br>
+$ `git clone https://github.com/NLDev/NodeScrambler2001.git && cd NodeScrambler2001` <br>
+If not, download it <a href="https://github.com/NLDev/NodeScrambler2001/archive/master.zip">here</a> and extract the ZIP file.<br>
+Then navigate to the folder.<br><br>
+3. Install all dependencies by typing <br>
+$ `npm install`<br><br>
+4. Finally: Start the thingy by typing <br>
+$ `npm start`
+
+**Alternative to `npm start`:**
+
+We actually have sum pretty neat command line args ;3 <br>
+Yah I was surprised too...
+
+| Argument | Alias | Description | Required |
+| -------- | ----- | ----------- | -------- |
+| --message | -m | The message to en-/decrypt | Yes |
+| --decrypt | -d | Decrypt the message | Yes |
+| --encrypt | -e | Encrypt the message | Yes |
+| --initshift | -i | This | Yes |
+| --shiftvalue | -v | That | Yes |
+| --key | -k | The Key | No |
+
+**Example:**
+
+Decrypt:
+
+`$ node app.js -d -m "this is test" -i 0 -v 1 -k "am key"` 
+
+<hr>
+
 ## Testimonials
 
 **What do our users say about this product:**
