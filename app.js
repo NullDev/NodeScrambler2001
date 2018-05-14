@@ -46,7 +46,7 @@ let init = async function(callback){
         message: "Shift Value"
     }]);
 
-    term.singleLineMenu(["Encrypt", "Decrypt"] , { style: term.inverse, selectedStyle: term.dim.blue.bgCyan }, function(err, call){
+    term.singleLineMenu(["Encrypt", "Decrypt"], { selectedStyle: term.dim.blue.bgCyan }, function(err, call){
         res["decrypt"] = call.selectedIndex;
         return callback(res);
     });
