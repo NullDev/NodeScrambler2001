@@ -85,3 +85,5 @@ Thou ist not wanteth thy are would if ye non to.
 Just leave already.
 
 <hr>
+
+<sub>Copyright (c) 2018 NullDev  -  Not that anyone would actually steal this...</sub>
