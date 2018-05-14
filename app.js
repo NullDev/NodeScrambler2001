@@ -58,6 +58,8 @@ let init = async function(callback){
 };
 
 let main = function(res){
+    console.log("\n");
+
     if (!isset(res.msgtxt)) return log("Oof... You didn't give me a text!", true);
     
     res.keytxt = isset(res.keytxt) ? res.keytxt : "";
@@ -72,6 +74,7 @@ let main = function(res){
 
 function end(){
     //Cleanups
+    console.log("\n");
     process.exit(0);
 }
 
