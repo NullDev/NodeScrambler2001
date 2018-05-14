@@ -52,6 +52,8 @@ $ `npm install`<br><br>
 4. Finally: Start the thingy by typing <br>
 $ `npm start`
 
+<hr>
+
 **Alternative to `npm start`:**
 
 We actually have sum pretty neat command line args ;3 <br>
