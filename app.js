@@ -58,7 +58,6 @@ let init = async function(callback){
 };
 
 let main = function(res){
-    term.clear();
     if (!isset(res.msgtxt)) return log("Oof... You didn't give me a text!", true);
     
     res.keytxt = isset(res.keytxt) ? res.keytxt : "";
