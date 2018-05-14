@@ -14,6 +14,8 @@ let log       = require("./utils/logger");
 let Scrambler = require("./utils/scrambler");
 let pj        = require("./package.json");
 
+term.clear();
+
 console.log(
     "\n" +
     "  #####################\n" +
@@ -58,9 +60,15 @@ let init = async function(callback){
 let main = function(res){
     term.clear();
     if (!isset(res.msgtxt)) return log("Oof... You didn't give me a text!", true);
+    
+    res.keytxt = isset(res.keytxt) ? res.keytxt : "";
+    res.ishift = isset(res.ishift) ? res.ishift : 0;
+    res.vshift = isset(res.vshift) ? res.vshift : 1;
+    
     let scrambler = new Scrambler(res.ishift, res.vshift, res.keytxt);
+    let result = res.decrypt ? scrambler.decrypt(res.msgtxt) : scrambler.encrypt(res.msgtxt);
 
-    res.decrypt ? scrambler.decrypt(res.msg) : scrambler.decrypt(res.msg);
+    log("Result: " + result);
 };
 
 function end(){
