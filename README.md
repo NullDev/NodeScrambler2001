@@ -32,6 +32,9 @@ then keep on searching. You won't find it here.
 **What do our users say about this product:**
 
 - "The best NodeJS project in the history of ever. Very good." - Syrapt0r
+- 10/10 - IGN
+
+<sub>If you want your review added here, please sacrifice a virgin or create a pull request.</sub>
 
 <hr>
 
