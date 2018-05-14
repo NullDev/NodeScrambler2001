@@ -11,7 +11,7 @@ let prompt    = require("prompts");
 let term      = require("terminal-kit").terminal;
 
 let log       = require("./utils/logger");
-let scrambler = require("./utils/scrambler");
+let Scrambler = require("./utils/scrambler");
 let pj        = require("./package.json");
 
 console.log(
@@ -26,6 +26,8 @@ console.log(
 
 log("Copyright (c) " + (new Date()).getFullYear() + " NullDev\n");
 
+function isset(obj){ return !!(obj && obj !== null && (typeof obj === 'string' && obj !== "")); }
+
 //This is where shit goes downhill
 
 let init = async function(callback){
@@ -36,7 +38,7 @@ let init = async function(callback){
     },{
         type: "text",
         name: "keytxt",
-        message: "Key"
+        message: "Key (optional)"
     },{
         type: "number",
         name: "ishift",
@@ -55,8 +57,10 @@ let init = async function(callback){
 
 let main = function(res){
     term.clear();
-    console.log(res);
-    end();
+    if (!isset(res.msgtxt)) return log("Oof... You didn't give me a text!", true);
+    let scrambler = new Scrambler(res.ishift, res.vshift, res.keytxt);
+
+    res.decrypt ? scrambler.decrypt(res.msg) : scrambler.decrypt(res.msg);
 };
 
 function end(){
@@ -64,4 +68,7 @@ function end(){
     process.exit(0);
 }
 
-init(function(res){ main(res); });
+init(function(res){ 
+    main(res); 
+    end();
+});
