@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/NLDev/NodeScrambler2001/issues"
   },
-  "homepage": "https://github.com/NLDev/NodeScrambler2001#readme"
+  "homepage": "https://github.com/NLDev/NodeScrambler2001#readme",
+  "dependencies": {
+    "prompts": "^0.1.8",
+    "terminal-kit": "^1.15.5"
+  }
 }
