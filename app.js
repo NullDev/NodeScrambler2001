@@ -8,6 +8,7 @@
 
 let fs     = require("fs");
 let prompt = require("prompts");
+let term   = require("terminal-kit").terminal;
 
 let log = require("./utils/logger");
 let pj  = require("./package.json");
@@ -26,7 +27,7 @@ log("Copyright (c) " + (new Date()).getFullYear() + " NullDev\n");
 
 //This is where shit goes downhill
 
-let init = async function(){
+let init = async function(callback){
     let res = await prompt([{
         type: "text",
         name: "msgtxt",
@@ -44,6 +45,22 @@ let init = async function(){
         name: "vshift",
         message: "Shift Value"
     }]);
+
+    term.singleLineMenu(["Encrypt", "Decrypt"] , { style: term.inverse, selectedStyle: term.dim.blue.bgCyan }, function(err, call){
+        res["decrypt"] = call.selectedIndex;
+        return callback(res);
+    });
 };
 
-init();
+let main = function(res){
+    term.clear();
+    console.log(res);
+    end();
+};
+
+function end(){
+    //Cleanups
+    process.exit(0);
+}
+
+init(function(res){ main(res); });
