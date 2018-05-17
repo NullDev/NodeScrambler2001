@@ -30,15 +30,15 @@ log("Copyright (c) " + (new Date()).getFullYear() + " NullDev\n");
 
 function isset(obj){ return !!(obj && obj !== null && (typeof obj === 'string' && obj !== "")); }
 
-//This is where shit goes downhill
-
-let getRand = function(){
+function getRand(){
     let base = require("./data/alphabet")[0];
     let shuffled = "";
     base = base.split("");
     while (base.length > 0) shuffled +=  base.splice(base.length * Math.random() << 0, 1);
     return shuffled;
-};
+}
+
+//This is where shit goes downhill
 
 let init = async function(callback){
     let splash = require("./data/splash");
@@ -106,13 +106,29 @@ let main = function(res){
     log("Result: " + result);
 };
 
+let start = function(){
+    let args = process.argv.slice(2);
+
+    if (args.length == 0){
+        init(function(res){ 
+            main(res); 
+            end();
+        });
+    }
+
+    else {
+        log("Hecc off. No CLI mode for you!");
+
+        //TODO: Handle args
+
+        end();
+    }
+};
+
 function end(){
     //Cleanups
     console.log();
     process.exit(0);
 }
 
-init(function(res){ 
-    main(res); 
-    end();
-});
+start();
