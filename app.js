@@ -140,6 +140,12 @@ let start = function(){
         res.keytxt = pArg.k || pArg.key;
         if (isset(res.keytxt)) verb("Key has been set to: " + res.keytxt + "\n");
 
+        res.ishift = pArg.i || pArg.initshift;
+        if (isset(res.ishift)) verb("Initial Shift has been set to: " + res.ishift + "\n");
+
+        res.vshift = pArg.s || pArg.shiftvalue;
+        if (isset(res.vshift)) verb("Shift Value has been set to: " + res.vshift + "\n");
+
         main(res);
         end();
     }
