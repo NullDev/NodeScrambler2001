@@ -27,6 +27,12 @@ then keep on searching. You won't find it here.
 
 <hr>
 
+## No seriously, what does it do?
+
+Well... It uh... it "encrypts" messages by shifting them. 
+
+<hr>
+
 ## Dependencies
 
 - all
@@ -100,7 +106,7 @@ same command but with alias:
 
 ## The reason behind this project:
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum (:D) sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
 
 <hr>
 
