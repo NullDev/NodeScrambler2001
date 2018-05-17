@@ -32,6 +32,14 @@ function isset(obj){ return !!(obj && obj !== null && (typeof obj === 'string' &
 
 //This is where shit goes downhill
 
+let getRand = function(){
+    let base = require("./data/alphabet")[0];
+    let shuffled = "";
+    base = base.split("");
+    while (base.length > 0) shuffled +=  base.splice(base.length * Math.random() << 0, 1);
+    return shuffled;
+};
+
 let init = async function(callback){
     let splash = require("./data/splash");
     log(splash[Math.floor(Math.random() * splash.length)] + "\n");
@@ -77,11 +85,20 @@ let main = function(res){
 
     if (!isset(res.msgtxt)) return log("Oof... You didn't give me a text!", true);
     
-    res.keytxt = isset(res.keytxt) ? res.keytxt : "";
     res.ishift = isset(res.ishift) ? res.ishift : 0;
     res.vshift = isset(res.vshift) ? res.vshift : 1;
     
+    if (!isset(res.keytxt)){
+        let newKey = getRand();
+        res.keytxt = newKey;
+        log("You haven't provided a key!");
+        log("Therefore it has been set to: \"" + newKey + "\"\n");
+    }
+
     let scrambler = new Scrambler(res.ishift, res.vshift, res.keytxt);
+
+    scrambler.addOffset(res.vshift);
+
     let result = res.decrypt ? scrambler.decrypt(res.msgtxt) : scrambler.encrypt(res.msgtxt);
 
     result = res.b64 == 1 ? Buffer.from(result).toString("base64") : result;
