@@ -107,6 +107,9 @@ let main = function(res){
 
 let start = function(){
     let args = process.argv.slice(2);
+    let verbose = false;
+
+    function verb(text){ if (verbose) log(text); }
 
     if (args.length == 0){
         init(function(res){ 
@@ -116,7 +119,10 @@ let start = function(){
     }
 
     else {
-        log("Running in CLI mode...\n");
+
+        if (("v" in pArg) || ("verbose" in pArg)) verbose = true;
+
+        verb("Running in CLI mode...\n");
         
         if (!isset(pArg.m) && !isset(pArg.message)) return log("Please specify a message.\n", true);
 
