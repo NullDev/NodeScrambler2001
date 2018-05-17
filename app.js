@@ -35,7 +35,7 @@ function isset(obj){ return !!(obj && obj !== null && (typeof obj === 'string' &
 let init = async function(callback){
     let splash = require("./data/splash");
     log(splash[Math.floor(Math.random() * splash.length)] + "\n");
-    
+
     let res = await prompt([{
         type: "text",
         name: "msgtxt",
@@ -59,7 +59,16 @@ let init = async function(callback){
     term.singleLineMenu(["Encrypt", "Decrypt"], { selectedStyle: term.dim.blue.bgCyan }, function(err, call){
         if (err) return log(err, true);
         res["decrypt"] = call.selectedIndex;
-        return callback(res);
+
+        console.log("\n");
+        log("Do you want to output the result as Base64?");
+
+        //Callback hell...
+        term.singleLineMenu(["No", "Yes"], { selectedStyle: term.dim.blue.bgCyan }, function(err, call){
+            if (err) return log(err, true);
+            res["b64"] = call.selectedIndex;
+            return callback(res);
+        });
     });
 };
 
@@ -74,6 +83,8 @@ let main = function(res){
     
     let scrambler = new Scrambler(res.ishift, res.vshift, res.keytxt);
     let result = res.decrypt ? scrambler.decrypt(res.msgtxt) : scrambler.encrypt(res.msgtxt);
+
+    result = res.b64 == 1 ? Buffer.from(result).toString("base64") : result;
 
     log("Result: " + result);
 };
