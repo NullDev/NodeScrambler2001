@@ -117,11 +117,10 @@ let start = function(){
 
     else {
         log("Running in CLI mode...\n");
-
-        if (!("m" in pArg) && !("message" in pArg)) return log("Please specify a message.\n", true);
         
-        if (!("d" in pArg) && !("decrypt" in pArg) &&
-            !("e" in pArg) && !("encrypt" in pArg)) return log("Please specify whether to encrypt or decrypt the message.\n", true);
+        if (!isset(pArg.m) && !isset(pArg.message)) return log("Please specify a message.\n", true);
+
+        if (!("d" in pArg) && !("decrypt" in pArg) && !("e" in pArg) && !("encrypt" in pArg)) return log("Please specify whether to encrypt or decrypt the message.\n", true);
 
         end();
     }
