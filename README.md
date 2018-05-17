@@ -65,14 +65,19 @@ Yah I was surprised too...
 | --decrypt | -d | Decrypt the message | Yes | N/A |
 | --encrypt | -e | Encrypt the message | yes | N/A |
 | --initshift | -i | This | No | 0 | 
-| --shiftvalue | -v | That | No | 1 |
-| --key | -k | The Key | No | null |
+| --shiftvalue | -s | That | No | 1 |
+| --key | -k | The Key | No | random |
+| --verbose | -v | Display additional informations | No | False |
 
 **Example:**
 
 Decrypt:
 
-`$ node app.js -d -m "this is test" -i 0 -v 1 -k "am key"` 
+`$ node app.js -dvm "this is test" -i 0 -s 1 -k "am key"` 
+
+same command but with alias:
+
+`$ node app.js --decrypt --verbose --message "this is test" --initshift 0 --shiftvalue 1 --key "am key"` 
 
 <hr>
 
