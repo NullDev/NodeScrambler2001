@@ -8,6 +8,7 @@
 
 let fs        = require("fs");
 let prompt    = require("prompts");
+let pArg      = require("minimist")(process.argv.slice(2));;
 let term      = require("terminal-kit").terminal;
 
 let log       = require("./utils/logger");
@@ -115,9 +116,12 @@ let start = function(){
     }
 
     else {
-        log("Hecc off. No CLI mode for you!");
+        log("Running in CLI mode...\n");
 
-        //TODO: Handle args
+        if (!("m" in pArg) && !("message" in pArg)) return log("Please specify a message.\n", true);
+        
+        if (!("d" in pArg) && !("decrypt" in pArg) &&
+            !("e" in pArg) && !("encrypt" in pArg)) return log("Please specify whether to encrypt or decrypt the message.\n", true);
 
         end();
     }
