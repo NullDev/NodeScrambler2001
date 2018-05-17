@@ -33,6 +33,9 @@ function isset(obj){ return !!(obj && obj !== null && (typeof obj === 'string' &
 //This is where shit goes downhill
 
 let init = async function(callback){
+    let splash = require("./data/splash");
+    log(splash[Math.floor(Math.random() * splash.length)] + "\n");
+    
     let res = await prompt([{
         type: "text",
         name: "msgtxt",
