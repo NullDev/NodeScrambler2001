@@ -119,15 +119,28 @@ let start = function(){
     }
 
     else {
+        let res = {};
 
         if (("v" in pArg) || ("verbose" in pArg)) verbose = true;
 
-        verb("Running in CLI mode...\n");
+        verb("Running in CLI mode (verbose)...\n");
         
         if (!isset(pArg.m) && !isset(pArg.message)) return log("Please specify a message.\n", true);
 
+        res.msgtxt = pArg.m || pArg.message;
+        verb("Message has been set to: " + res.msgtxt + "\n");
+
         if (!("d" in pArg) && !("decrypt" in pArg) && !("e" in pArg) && !("encrypt" in pArg)) return log("Please specify whether to encrypt or decrypt the message.\n", true);
 
+        if ((("d" in pArg) || ("decrypt" in pArg)) && (("e" in pArg) || ("encrypt" in pArg))) return log("Please choose ONE mode only.\n", true);
+
+        res.decrypt = (("d" in pArg) || ("decrypt" in pArg)) ? 1 : 0;
+        verb("Mode has been set to: " + (res.decrypt == 1 ? "Decrypt" : "Encrypt") + "\n");
+
+        res.keytxt = pArg.k || pArg.key;
+        if (isset(res.keytxt)) verb("Key has been set to: " + res.keytxt + "\n");
+
+        main(res);
         end();
     }
 };
