@@ -79,10 +79,10 @@ Yah I was surprised too...
 
 | Argument | Alias | Description | Required | Default |
 | -------- | ----- | ----------- | -------- | ------- |
-| --help | -h | Displays the help menu | no | N/A |
+| --help | -h | Displays the help menu | No | N/A |
 | --message | -m | The message to en-/decrypt | Yes | N/A |
 | --decrypt | -d | Decrypt the message | Yes | N/A |
-| --encrypt | -e | Encrypt the message | yes | N/A |
+| --encrypt | -e | Encrypt the message | Yes | N/A |
 | --initshift | -i | This | No | 0 | 
 | --shiftvalue | -s | That | No | 1 |
 | --key | -k | The Key | No | random |

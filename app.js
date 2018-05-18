@@ -130,10 +130,10 @@ let start = function(){
             "|==============|=======|=================================|==========|=========|\n" +
             "| Argument     | Alias | Description                     | Required | Default |\n" +
             "| ------------ | ----- | ------------------------------- | -------- | ------- |\n" +
-            "| --help       | -h    | Displays the help menu          | no       | N/A     |\n" +
+            "| --help       | -h    | Displays the help menu          | No       | N/A     |\n" +
             "| --message    | -m    | The message to en-/decrypt      | Yes      | N/A     |\n" +
             "| --decrypt    | -d    | Decrypt the message             | Yes      | N/A     |\n" +
-            "| --encrypt    | -e    | Encrypt the message             | yes      | N/A     |\n" +
+            "| --encrypt    | -e    | Encrypt the message             | Yes      | N/A     |\n" +
             "| --initshift  | -i    | This                            | No       | 0       |\n" +
             "| --shiftvalue | -s    | That                            | No       | 1       |\n" +
             "| --key        | -k    | The Key                         | No       | random  |\n" +
