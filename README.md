@@ -79,6 +79,7 @@ Yah I was surprised too...
 
 | Argument | Alias | Description | Required | Default |
 | -------- | ----- | ----------- | -------- | ------- |
+| --help | -h | Displays the help menu | no | N/A |
 | --message | -m | The message to en-/decrypt | Yes | N/A |
 | --decrypt | -d | Decrypt the message | Yes | N/A |
 | --encrypt | -e | Encrypt the message | yes | N/A |
