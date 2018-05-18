@@ -145,9 +145,15 @@ let start = function(){
         res.msgtxt = pArg.m || pArg.message;
         verb("Message has been set to: " + res.msgtxt + "\n");
 
-        if (!("d" in pArg) && !("decrypt" in pArg) && !("e" in pArg) && !("encrypt" in pArg)) return log("Please specify whether to encrypt or decrypt the message.\n", true);
+        if (!("d" in pArg) && !("decrypt" in pArg) && !("e" in pArg) && !("encrypt" in pArg)) return log(
+            "Please specify whether to encrypt or decrypt the message.\n", 
+            true
+        );
 
-        if ((("d" in pArg) || ("decrypt" in pArg)) && (("e" in pArg) || ("encrypt" in pArg))) return log("Please choose ONE mode only.\n", true);
+        if ((("d" in pArg) || ("decrypt" in pArg)) && (("e" in pArg) || ("encrypt" in pArg))) return log(
+            "Please choose ONE mode only.\n", 
+            true
+        );
 
         res.decrypt = (("d" in pArg) || ("decrypt" in pArg)) ? 1 : 0;
         verb("Mode has been set to: " + (res.decrypt == 1 ? "Decrypt" : "Encrypt") + "\n");
