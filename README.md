@@ -29,7 +29,7 @@ then keep on searching. You won't find it here.
 
 ## No seriously, what does it do?
 
-Well... It uh... it "encrypts" messages by shifting them. 
+Well... It uh... it encrypts messages by shifting them. 
 
 <hr>
 
