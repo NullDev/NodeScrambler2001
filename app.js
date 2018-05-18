@@ -63,20 +63,38 @@ let init = async function(callback){
         message: "Shift Value"
     }]);
 
-    term.singleLineMenu(["Encrypt", "Decrypt"], { selectedStyle: term.dim.blue.bgCyan }, function(err, call){
-        if (err) return log(err, true);
-        res["decrypt"] = call.selectedIndex;
-
-        console.log("\n");
-        log("Do you want to output the result as Base64?");
-
-        //Callback hell...
-        term.singleLineMenu(["No", "Yes"], { selectedStyle: term.dim.blue.bgCyan }, function(err, call){
+    function promptMode(){
+        term.singleLineMenu(["Encrypt", "Decrypt"], { selectedStyle: term.dim.blue.bgCyan }, function(err, call){
             if (err) return log(err, true);
-            res["b64"] = call.selectedIndex;
-            return callback(res);
+            res["decrypt"] = call.selectedIndex;
+
+            console.log("\n");
+            log("Do you want to output the result as Base64?");
+
+            //Callback hell...
+            term.singleLineMenu(["No", "Yes"], { selectedStyle: term.dim.blue.bgCyan }, function(err, call){
+                if (err) return log(err, true);
+                res["b64"] = call.selectedIndex;
+                return callback(res);
+            });
         });
-    });
+    }
+
+    if(/^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/.test(res.msgtxt)){
+        console.log();
+        log("Hold on! Your message appears to be in base64. Is that correct?");
+        term.singleLineMenu(["Yes", "No"], { selectedStyle: term.dim.blue.bgCyan }, function(err, call){
+            if (err) return log(err, true);
+            if (call.selectedIndex == 0){
+                console.log("\n");
+                res.msgtxt = Buffer.from(res.msgtxt, "base64").toString("ascii");
+                log("The decoded message is: " + res.msgtxt);
+                promptMode();
+            }
+        });
+    }
+
+    else promptMode();
 };
 
 let main = function(res){
@@ -109,6 +127,7 @@ let main = function(res){
 
     result = res.b64 == 1 ? Buffer.from(result).toString("base64") : result;
 
+    console.log();
     log("Result: " + result);
 };
 
@@ -143,6 +162,7 @@ let start = function(){
             "| --encrypt    | -e    | Encrypt the message             | Yes      | N/A     |\n" +
             "| --initshift  | -i    | This                            | No       | 0       |\n" +
             "| --shiftvalue | -s    | That                            | No       | 1       |\n" +
+            "| --base64     | -b    | Output as Base64                | No       | False   |\n" +
             "| --key        | -k    | The Key                         | No       | random  |\n" +
             "| --verbose    | -v    | Display additional informations | No       | False   |\n"
         );
