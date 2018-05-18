@@ -20,7 +20,7 @@ I'm sorry. No, really. <br>
 If you question my sanity after reading everything here, thats perfectly normal. <br>
 It all started by meming around with [@Syrapt0r](https://github.com/Syrapt0r) and uh... this happened. 
 
-End of story ¯\\_(ツ)_/¯
+End of story ¯\\\_(ツ)\_/¯
 
 <hr>
 
