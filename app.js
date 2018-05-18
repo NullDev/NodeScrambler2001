@@ -125,6 +125,21 @@ let start = function(){
 
         verb("Running in CLI mode (verbose)...\n");
         
+        if (("h" in pArg) || ("help" in pArg)) return log(
+            "Help:\n\n" +
+            "|==============|=======|=================================|==========|=========|\n" +
+            "| Argument     | Alias | Description                     | Required | Default |\n" +
+            "| ------------ | ----- | ------------------------------- | -------- | ------- |\n" +
+            "| --help       | -h    | Displays the help menu          | no       | N/A     |\n" +
+            "| --message    | -m    | The message to en-/decrypt      | Yes      | N/A     |\n" +
+            "| --decrypt    | -d    | Decrypt the message             | Yes      | N/A     |\n" +
+            "| --encrypt    | -e    | Encrypt the message             | yes      | N/A     |\n" +
+            "| --initshift  | -i    | This                            | No       | 0       |\n" +
+            "| --shiftvalue | -s    | That                            | No       | 1       |\n" +
+            "| --key        | -k    | The Key                         | No       | random  |\n" +
+            "| --verbose    | -v    | Display additional informations | No       | False   |\n"
+        );
+
         if (!isset(pArg.m) && !isset(pArg.message)) return log("Please specify a message.\n", true);
 
         res.msgtxt = pArg.m || pArg.message;
