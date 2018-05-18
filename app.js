@@ -89,8 +89,9 @@ let init = async function(callback){
                 console.log("\n");
                 res.msgtxt = Buffer.from(res.msgtxt, "base64").toString("ascii");
                 log("The decoded message is: " + res.msgtxt);
-                promptMode();
             }
+            console.log();
+            promptMode();
         });
     }
 
