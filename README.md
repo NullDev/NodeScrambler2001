@@ -131,7 +131,7 @@ See: [use cases](#use-cases)
 
 ## Whats the difference between WordScrambler2001 and NodeScrambler2001?
 
-As far as I know, NodeJS isn't C.
+As far as I know, NodeJS isn't C++.
 
 <hr>
 
