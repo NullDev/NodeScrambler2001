@@ -39,7 +39,12 @@ class Scrambler {
         let digest;
         let letterVal = 0;
 
-        for (let i = 0; i < alphabetA.length; i++) if (letter == alphabetA.charAt(i)) letterVal = i;
+        for (let i = 0; i < alphabetA.length; i++){
+            if (letter == alphabetA.charAt(i)){
+                letterVal = i;
+                break;
+            }
+        }
 
         digest = this.keyTxtVal.charAt((letterVal + this.initShift) % this.keyTxtVal.length);
         this.addOffset(this.shiftVals);
@@ -52,7 +57,12 @@ class Scrambler {
         let shiftChar = 0;
         let letterVal = 0;
 
-        for (let i = 0; i < this.keyTxtVal.length; i++) if (letter == this.keyTxtVal.charAt(i)) letterVal = i;
+        for (let i = 0; i < this.keyTxtVal.length; i++){
+            if (letter == this.keyTxtVal.charAt(i)){
+                letterVal = i;
+                break;
+            }
+        }
 
         shiftChar = letterVal - this.initShift;
         while (shiftChar < 0) shiftChar += alphabetA.length;
