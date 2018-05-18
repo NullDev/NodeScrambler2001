@@ -14,7 +14,7 @@ This is a useless NodeJS Clone of [Syrapt0r](https://github.com/Syrapt0r)'s [Wor
 No, seriously. <br>
 It's a completely unnecessary repository which makes me question my existence and everything I believed in. 
 
-**For anyone comming accross this repo:**
+**For anyone comming across this repo:**
 
 I'm sorry. No, really. <br>
 If you question my sanity after reading everything here, thats perfectly normal. <br>
