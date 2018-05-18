@@ -14,6 +14,14 @@ This is a useless NodeJS Clone of [Syrapt0r](https://github.com/Syrapt0r)'s [Wor
 No, seriously. <br>
 It's a completely unnecessary repository which makes me question my existence and everything I believed in. 
 
+**For anyone comming accross this repo:**
+
+I'm sorry. No, really. <br>
+If you question my sanity after reading everything here, thats perfectly normal. <br>
+It all started by meming around with [@Syrapt0r](https://github.com/Syrapt0r) and uh... this happened. 
+
+End of story ¯\_(ツ)_/¯
+
 <hr>
 
 **Why?** 
@@ -31,11 +39,15 @@ then keep on searching. You won't find it here.
 
 Well... It uh... it encrypts messages by shifting them. 
 
+This monoalphabetic substitution cipher works by replacing every letter in a string with the corresponding letter in the key alphabet, adding a changing offset.
+
 <hr>
 
 ## Dependencies
 
 - all
+
+([prompts](https://www.npmjs.com/package/prompts), [minimist](https://www.npmjs.com/package/minimist) and [terminal-kit](https://www.npmjs.com/package/terminal-kit))
 
 <hr>
 
@@ -92,7 +104,7 @@ same command but with alias:
 **What do our users say about this product:**
 
 - "The best NodeJS project in the history of ever. Very good." - Syrapt0r
-- 10/10 - IGN
+- "10/10" - IGN
 
 <sub>If you want your review added here, please sacrifice a virgin or create a pull request.</sub>
 
