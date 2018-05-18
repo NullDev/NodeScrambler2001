@@ -84,14 +84,21 @@ let main = function(res){
 
     if (!isset(res.msgtxt)) return log("Oof... You didn't give me a text!", true);
     
-    res.ishift = isset(res.ishift) ? res.ishift : 0;
-    res.vshift = isset(res.vshift) ? res.vshift : 1;
+    if (!isset(res.ishift)){
+        res.ishift = 0;
+        log("Initial shift wasn't specified. It has been set to: 0\n");
+    }
     
+    if (!isset(res.vshift)){
+        res.vshift = 1;
+        log("Shift Value wasn't specified. It has been set to: 1\n");
+    }
+
     if (!isset(res.keytxt)){
         let newKey = getRand();
         res.keytxt = newKey;
         log("You haven't provided a key!");
-        log("Therefore it has been set to: \"" + newKey + "\"\n");
+        log("Therefore it has been set to: \"" + newKey + "\"");
     }
 
     let scrambler = new Scrambler(res.ishift, res.vshift, res.keytxt);
@@ -159,7 +166,7 @@ let start = function(){
         verb("Mode has been set to: " + (res.decrypt == 1 ? "Decrypt" : "Encrypt") + "\n");
 
         res.keytxt = pArg.k || pArg.key;
-        if (isset(res.keytxt)) verb("Key has been set to: " + res.keytxt + "\n");
+        if (isset(res.keytxt)) verb("Key has been set to: " + res.keytxt);
 
         res.ishift = pArg.i || pArg.initshift;
         if (isset(res.ishift)) verb("Initial Shift has been set to: " + res.ishift + "\n");
