@@ -16,12 +16,12 @@ class Scrambler {
         this.initShift = ishift;
         this.shiftVals = vshift;
         this.keyTxtVal = keytxt;
-    }
+    };
 
     addOffset(n){
         this.initShift += n;
         if (this.initShift < 0) this.initShift += alphabetA.length;
-    }
+    };
 
     encrypt(msg){
         let res = "";
@@ -61,7 +61,7 @@ class Scrambler {
         this.addOffset(this.shiftVals);
 
         return digest;
-    }
+    };
 }
 
 module.exports = Scrambler;
