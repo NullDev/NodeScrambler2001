@@ -68,16 +68,19 @@ let init = async function(callback){
             if (err) return log(err, true);
             res["decrypt"] = call.selectedIndex;
 
+            second(res);
+        });
+        
+        function second(res){
             console.log("\n");
             log("Do you want to output the result as Base64?");
 
-            //Callback hell...
             term.singleLineMenu(["No", "Yes"], { selectedStyle: term.dim.blue.bgCyan }, function(err, call){
                 if (err) return log(err, true);
                 res["b64"] = call.selectedIndex;
                 return callback(res);
             });
-        });
+        }
     }
 
     if(/^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/.test(res.msgtxt)){
