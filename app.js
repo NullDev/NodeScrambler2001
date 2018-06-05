@@ -157,18 +157,21 @@ let start = function(){
         
         if (("h" in pArg) || ("help" in pArg)) return log(
             "Help:\n\n" +
-            "|==============|=======|=================================|==========|=========|\n" +
-            "| Argument     | Alias | Description                     | Required | Default |\n" +
-            "| ------------ | ----- | ------------------------------- | -------- | ------- |\n" +
-            "| --help       | -h    | Displays the help menu          | No       | N/A     |\n" +
-            "| --message    | -m    | The message to en-/decrypt      | Yes      | N/A     |\n" +
-            "| --decrypt    | -d    | Decrypt the message             | Yes      | N/A     |\n" +
-            "| --encrypt    | -e    | Encrypt the message             | Yes      | N/A     |\n" +
-            "| --initshift  | -i    | This                            | No       | 0       |\n" +
-            "| --shiftvalue | -s    | That                            | No       | 1       |\n" +
-            "| --base64     | -b    | Output as Base64                | No       | False   |\n" +
-            "| --key        | -k    | The Key                         | No       | random  |\n" +
-            "| --verbose    | -v    | Display additional informations | No       | False   |\n"
+            " |==============|=======|=================================|==========|=========|\n" +
+            " | Argument     | Alias | Description                     | Required | Default |\n" +
+            " | ------------ | ----- | ------------------------------- | -------- | ------- |\n" +
+            " | --help       | -h    | Displays the help menu          | No       | N/A     |\n" +
+            " | --message    | -m    | The message to en-/decrypt      | Yes      | N/A     |\n" +
+            " | --decrypt    | -d    | Decrypt the message             | Yes      | N/A     |\n" +
+            " | --encrypt    | -e    | Encrypt the message             | Yes      | N/A     |\n" +
+            " | --initshift  | -i    | Initial Cipher Shift            | No       | 0       |\n" +
+            " | --shiftvalue | -s    | Cipher Shift Value              | No       | 1       |\n" +
+            " | --base64     | -b    | Output as Base64                | No       | False   |\n" +
+            " | --is-base64  | -n    | Whether the input is in base64  | No       | False   |\n" +
+            " | --key        | -k    | The Key                         | No       | Random  |\n" +
+            " | --verbose    | -v    | Display additional informations | No       | False   |\n" +
+            " | ------------ | ----- | ------------------------------- | -------- | ------- |\n" +
+            " |=============================================================================|\n"
         );
 
         if (!isset(pArg.m) && !isset(pArg.message)) return log("Please specify a message.\n", true);
