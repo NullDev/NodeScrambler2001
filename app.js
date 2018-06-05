@@ -29,7 +29,9 @@ console.log(
 
 log("Copyright (c) " + (new Date()).getFullYear() + " NullDev\n");
 
-function isset(obj){ return !!(obj && obj !== null && (typeof obj === 'string' && obj !== "")); }
+let isset = function(obj){ 
+    return !!(obj && obj !== null && (typeof obj === 'string' || typeof obj === 'number' && obj !== "") || obj === 0); 
+};
 
 function getRand(){
     let base = require("./data/alphabet")[0];
@@ -177,7 +179,7 @@ let start = function(){
         if (!isset(pArg.m) && !isset(pArg.message)) return log("Please specify a message.\n", true);
 
         res.msgtxt = pArg.m || pArg.message;
-        verb("Message has been set to: " + res.msgtxt + "\n");
+        if (isset(res.msg)) verb("Message has been set to: " + res.msgtxt + "\n");
 
         if (!("d" in pArg) && !("decrypt" in pArg) && !("e" in pArg) && !("encrypt" in pArg)) return log(
             "Please specify whether to encrypt or decrypt the message.\n", 
@@ -193,13 +195,21 @@ let start = function(){
         verb("Mode has been set to: " + (res.decrypt == 1 ? "Decrypt" : "Encrypt") + "\n");
 
         res.keytxt = pArg.k || pArg.key;
-        if (isset(res.keytxt)) verb("Key has been set to: " + res.keytxt);
+        if (isset(res.keytxt)) verb("Key has been set to: " + res.keytxt + "\n");
 
-        res.ishift = pArg.i || pArg.initshift;
+        res.ishift = pArg.i;
+        if (res.ishift === false) res.ishift = pArg.initshift;
         if (isset(res.ishift)) verb("Initial Shift has been set to: " + res.ishift + "\n");
 
-        res.vshift = pArg.s || pArg.shiftvalue;
+        res.vshift = pArg.s;
+        if (res.vshift === false) res.vshift = pArg.shiftvalue;
         if (isset(res.vshift)) verb("Shift Value has been set to: " + res.vshift + "\n");
+
+        res.isbase = pArg.n || pArg.is-base64;
+        verb("Input message is " + (res.isbase ? "" : "not ") + "base64\n");
+
+        res.b64 = pArg.b || pArg.base64;
+        verb("Result will " + (res.b64 ? "" : "not ") + "be printed as Base64\n");
 
         main(res);
         end();
