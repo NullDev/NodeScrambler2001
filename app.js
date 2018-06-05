@@ -179,7 +179,7 @@ let start = function(){
         if (!isset(pArg.m) && !isset(pArg.message)) return log("Please specify a message.\n", true);
 
         res.msgtxt = pArg.m || pArg.message;
-        if (isset(res.msg)) verb("Message has been set to: " + res.msgtxt + "\n");
+        if (isset(res.msgtxt)) verb("Message has been set to: " + res.msgtxt + "\n");
 
         if (!("d" in pArg) && !("decrypt" in pArg) && !("e" in pArg) && !("encrypt" in pArg)) return log(
             "Please specify whether to encrypt or decrypt the message.\n", 
@@ -213,7 +213,7 @@ let start = function(){
 
         if (res.isbase){
             res.msgtxt = Buffer.from(res.msgtxt, "base64").toString("ascii");
-            verb("Decoded input message is '" + res.msgtxt + "'");
+            verb("Decoded Base64 input message is '" + res.msgtxt + "'");
         }
 
         main(res);
