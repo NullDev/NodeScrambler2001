@@ -83,9 +83,11 @@ Yah I was surprised too...
 | --message | -m | The message to en-/decrypt | Yes | N/A |
 | --decrypt | -d | Decrypt the message | Yes | N/A |
 | --encrypt | -e | Encrypt the message | Yes | N/A |
-| --initshift | -i | This | No | 0 | 
-| --shiftvalue | -s | That | No | 1 |
-| --key | -k | The Key | No | random |
+| --initshift | -i | Initial Cipher Shift | No | 0 | 
+| --shiftvalue | -s | Cipher Shift Value | No | 1 |
+| --base64 | -b | Output as Base64 | No | False |
+| --is-base64 | -n | Whether the input is in base64 | No | False |
+| --key | -k | The Key | No | Random |
 | --verbose | -v | Display additional informations | No | False |
 
 **Example:**
