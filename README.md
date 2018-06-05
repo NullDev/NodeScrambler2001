@@ -51,6 +51,16 @@ This monoalphabetic substitution cipher works by replacing every letter in a str
 
 <hr>
 
+## "Showcase"
+
+<sub>It very good</sub>
+
+<p align="center">
+<img height="150" width="auto" src="https://raw.githubusercontent.com/NLDev/NodeScrambler2001/master/.readme/s1.png" /><br>
+</p>
+
+<hr>
+
 ## How 2 instol
 
 **Wait wait wait wait...**
