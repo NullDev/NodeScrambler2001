@@ -205,11 +205,16 @@ let start = function(){
         if (res.vshift === false) res.vshift = pArg.shiftvalue;
         if (isset(res.vshift)) verb("Shift Value has been set to: " + res.vshift + "\n");
 
-        res.isbase = pArg.n || pArg.is-base64;
+        res.isbase = pArg.n || pArg["is-base64"];
         verb("Input message is " + (res.isbase ? "" : "not ") + "base64\n");
 
         res.b64 = pArg.b || pArg.base64;
         verb("Result will " + (res.b64 ? "" : "not ") + "be printed as Base64\n");
+
+        if (res.isbase){
+            res.msgtxt = Buffer.from(res.msgtxt, "base64").toString("ascii");
+            verb("Decoded input message is '" + res.msgtxt + "'");
+        }
 
         main(res);
         end();
