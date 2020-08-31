@@ -9,7 +9,7 @@ It's WordScrambler2001 but with more fast
 
 ## OwO wats dis
 
-This is a useless NodeJS Clone of [Syrapt0r](https://github.com/Syrapt0r)'s [WordScrambler2001](https://github.com/Syrapt0r/WordScrambler2001).
+This is a useless NodeJS Clone of [Syrapt0r](https://github.com/InitialPosition)'s [WordScrambler2001](https://github.com/InitialPosition/WordScrambler2001).
 
 No, seriously. <br>
 It's a completely unnecessary repository which makes me question my existence and everything I believed in. 
