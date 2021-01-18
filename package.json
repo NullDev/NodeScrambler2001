@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NLDev/NodeScrambler2001.git"
+    "url": "git+https://github.com/NullDev/NodeScrambler2001.git"
   },
   "author": "NullDev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NLDev/NodeScrambler2001/issues"
+    "url": "https://github.com/NullDev/NodeScrambler2001/issues"
   },
-  "homepage": "https://github.com/NLDev/NodeScrambler2001#readme",
+  "homepage": "https://github.com/NullDev/NodeScrambler2001#readme",
   "dependencies": {
     "minimist": "^1.2.3",
     "prompts": "^0.1.8",
