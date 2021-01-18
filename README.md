@@ -9,7 +9,7 @@ It's WordScrambler2001 but with more fast
 
 ## OwO wats dis
 
-This is a useless NodeJS Clone of [Syrapt0r](https://github.com/InitialPosition)'s [WordScrambler2001](https://github.com/InitialPosition/WordScrambler2001).
+This is a useless NodeJS Clone of [InitialPosition](https://github.com/InitialPosition)'s [WordScrambler2001](https://github.com/InitialPosition/WordScrambler2001).
 
 No, seriously. <br>
 It's a completely unnecessary repository which makes me question my existence and everything I believed in. 
@@ -18,7 +18,7 @@ It's a completely unnecessary repository which makes me question my existence an
 
 I'm sorry. No, really. <br>
 If you question my sanity after reading everything here, thats perfectly normal. <br>
-It all started by meming around with [@Syrapt0r](https://github.com/Syrapt0r) and uh... this happened. 
+It all started by meming around with [@InitialPosition](https://github.com/InitialPosition) and uh... this happened. 
 
 End of story ¯\\\_(ツ)\_/¯
 
@@ -56,7 +56,7 @@ This monoalphabetic substitution cipher works by replacing every letter in a str
 <sub>It very good</sub>
 
 <p align="center">
-<img height="450" width="auto" src="https://raw.githubusercontent.com/NLDev/NodeScrambler2001/master/.readme/s1.png" /><br>
+<img height="450" width="auto" src="https://raw.githubusercontent.com/NullDev/NodeScrambler2001/master/.readme/s1.png" /><br>
 </p>
 
 <hr>
@@ -72,8 +72,8 @@ You are completely sure you want to do this? Like... A 100% positive?
 $ `node -v` <br>
 If this returns a version number, NodeJS is installed. **If not**, get NodeJS <a href="https://nodejs.org/en/download/package-manager/">here</a>. <br><br>
 2. Clone the repository and navigate to it. If you have Git installed, type <br>
-$ `git clone https://github.com/NLDev/NodeScrambler2001.git && cd NodeScrambler2001` <br>
-If not, download it <a href="https://github.com/NLDev/NodeScrambler2001/archive/master.zip">here</a> and extract the ZIP file.<br>
+$ `git clone https://github.com/NullDev/NodeScrambler2001.git && cd NodeScrambler2001` <br>
+If not, download it <a href="https://github.com/NullDev/NodeScrambler2001/archive/master.zip">here</a> and extract the ZIP file.<br>
 Then navigate to the folder.<br><br>
 3. Install all dependencies by typing <br>
 $ `npm install`<br><br>
@@ -165,4 +165,4 @@ Just leave already.
 
 <hr>
 
-<sub>Copyright (c) 2018 NullDev  -  Not that anyone would actually steal this...</sub>
+<sub>Copyright (c) NullDev  -  Not that anyone would actually steal this...</sub>
