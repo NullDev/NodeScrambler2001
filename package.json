@@ -19,6 +19,6 @@
   "dependencies": {
     "minimist": "^1.2.6",
     "prompts": "^0.1.8",
-    "terminal-kit": "^1.15.5"
+    "terminal-kit": "^2.1.8"
   }
 }
